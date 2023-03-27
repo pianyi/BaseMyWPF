@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>Sample.Core</AssemblyName>
+    <RootNamespace>Sample.Core</RootNamespace>
+    <Configurations>Debug;Release</Configurations>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>DEBUG;TRACE;AP</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>AP</DefineConstants>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft-WindowsAPICodePack-Shell" Version="1.1.4" />
+    <PackageReference Include="NLog" Version="5.1.2" />
+    <PackageReference Include="Prism.Wpf" Version="8.1.97" />
+    <PackageReference Include="ReactiveProperty" Version="9.1.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\PrismExpansion\PrismExpansion.csproj" />
+  </ItemGroup>
+</Project>

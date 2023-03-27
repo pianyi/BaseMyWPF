@@ -1,0 +1,19 @@
+﻿<prism:PrismApplication
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:prism="http://prismlibrary.com/"
+             x:Class="Sample.App"
+             Exit="ApplicationExit" DispatcherUnhandledException="ApplicationDispatcherUnhandledException" ShutdownMode="OnMainWindowClose">
+
+    <prism:PrismApplication.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!-- フォント・フォントサイズの指定があるため、必ずメッセージを1番に読み込んでください -->
+                <!-- メッセージは、App.xaml.cs 内で OSの言語毎に上書きされます -->
+                <ResourceDictionary x:Name="Message" Source="/Sample.Resources;component/Resources/Message/Message.en.xaml"/>
+                <ResourceDictionary x:Name="BaseStyle" Source="/Sample.Resources;component/Resources/Style/BaseStyle.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </prism:PrismApplication.Resources>
+
+</prism:PrismApplication>

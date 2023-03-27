@@ -1,0 +1,32 @@
+﻿<Window x:Class="Sample.MainWindow.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:core="clr-namespace:Sample.Core;assembly=Sample.Core"
+        xmlns:prism="http://prismlibrary.com/" 
+        xmlns:viewmodels="clr-namespace:Sample.MainWindow.ViewModels" 
+        mc:Ignorable="d"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        d:DataContext="{d:DesignInstance Type=viewmodels:MainWindowViewModel}"
+        Style="{DynamicResource BaseStyle}"
+        Title="{Binding Title.Value}" 
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanResizeWithGrip" 
+        SizeToContent="WidthAndHeight"
+        IsEnabled="{Binding IsEnableMainWindow.Value}" 
+        Height="{Binding MainWindowHeight.Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+        MinHeight="{Binding MainWindowMinHeight.Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+        Width="{Binding MainWindowWidth.Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+        MinWidth="{Binding MainWindowMinWidth.Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+        WindowState="{Binding MainWindowState.Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+
+    <Window.InputBindings>
+        <KeyBinding Command="{Binding KeyDownEscCommand}" Key="Esc"/>
+    </Window.InputBindings>
+
+    <Grid>
+        <ContentControl prism:RegionManager.RegionName="{x:Static core:SampleConstants.ChangeMainScreenAreaName}" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" />
+    </Grid>
+
+</Window>

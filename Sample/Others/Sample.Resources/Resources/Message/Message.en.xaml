@@ -1,0 +1,13 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:system="clr-namespace:System;assembly=System.Runtime">
+    <FontFamily x:Key="BaseFontFamily">Tahoma</FontFamily>
+    <system:Double x:Key="BaseFontSize">13</system:Double>
+    <system:String x:Key="COM-00-000" xml:space="preserve">Version {0}.{1}.{2}.{3}</system:String>
+    <system:String x:Key="COM-00-001" xml:space="preserve">Yes</system:String>
+    <system:String x:Key="COM-00-002" xml:space="preserve">No</system:String>
+    <system:String x:Key="COM-00-003" xml:space="preserve">OK</system:String>
+    <system:String x:Key="COM-00-004" xml:space="preserve">Cancel</system:String>
+
+    <system:String x:Key="S01-00-001" xml:space="preserve">Execute</system:String>
+    <system:String x:Key="S01-00-002" xml:space="preserve">Empty</system:String>
+
+</ResourceDictionary>
