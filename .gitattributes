@@ -1,0 +1,6 @@
+*.sh        text eol=lf
+
+*~ export-ignore
+.DS_Store export-ignore
+.gitignore export-ignore
+.gitattributes export-ignore
